@@ -1,30 +1,30 @@
-function login(){
-alert("تم تسجيل الدخول إلى Nexora");
+async function login(){
+
+const email = document.querySelector("#email").value;
+const password = document.querySelector("#password").value;
+
+const res = await fetch("/login",{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({email,password})
+
+});
+
+const data = await res.json();
+
+if(data.success){
+
+alert("تم تسجيل الدخول");
+
+}else{
+
+alert("بيانات خاطئة");
+
 }
-
-function openBot(){
-alert("مرحباً بك في المساعد الذكي Nexora AI");
-}
-
-const canvas = document.getElementById("bg");
-const ctx = canvas.getContext("2d");
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-for(let i=0;i<120;i++){
-
-ctx.beginPath();
-
-ctx.arc(
-Math.random()*canvas.width,
-Math.random()*canvas.height,
-2,
-0,
-Math.PI*2
-);
-
-ctx.fillStyle="rgba(255,255,255,0.3)";
-ctx.fill();
 
 }
