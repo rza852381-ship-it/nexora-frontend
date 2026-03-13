@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="ar">
+<head><meta charset="UTF-8">
+<title>Nexora AI Manager</title><style>
+
+body{
+background:#0a0a0a;
+color:#d4af37;
+font-family:Arial;
+margin:0;
+}
+
+.top{
+background:#111;
+padding:20px;
+display:flex;
+justify-content:space-between;
+}
+
+.container{
+padding:40px;
+}
+
+.card{
+background:#111;
+padding:25px;
+border-radius:10px;
+margin-bottom:20px;
+border:1px solid #d4af37;
+}
+
+button{
+background:#d4af37;
+border:none;
+padding:10px 20px;
+border-radius:6px;
+cursor:pointer;
+}
+
+#advice{
+margin-top:20px;
+font-size:18px;
+}
+
+</style></head><body><div class="top"><h2>Nexora AI Manager</h2><a href="user-dashboard.html">العودة</a>
+
+</div><div class="container"><div class="card"><h3>تحليل المتجر</h3><button onclick="analyzeStore()">تحليل المتجر بالذكاء الاصطناعي</button>
+
+<div id="advice"></div></div><div class="card"><h3>إنشاء وصف منتج بالذكاء الاصطناعي</h3><button onclick="generateDescription()">إنشاء وصف</button>
+
+<div id="desc"></div></div><div class="card"><h3>اقتراح حملة إعلانية</h3><button onclick="campaignIdea()">اقتراح حملة</button>
+
+<div id="campaign"></div></div></div><script>
+
+function analyzeStore(){
+
+document.getElementById("advice").innerText =
+"تحليل Nexora: أفضل منتج لديك هو منتج العناية بالبشرة. ننصح بإنشاء حملة إعلانية له وزيادة المخزون."
+
+}
+
+function generateDescription(){
+
+document.getElementById("desc").innerText =
+"منتج فاخر مصمم بعناية ليمنحك أفضل تجربة. جودة عالية وسعر مناسب يجعله الخيار المثالي."
+
+}
+
+function campaignIdea(){
+
+document.getElementById("campaign").innerText =
+"اقتراح Nexora: إنشاء فيديو قصير للمنتج ونشره على Instagram و TikTok مع عرض خصم 15%."
+
+}
+
+</script></body></html>
