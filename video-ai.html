@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="ar"><head><meta charset="UTF-8">
+<title>Nexora AI Video</title><style>
+
+body{
+background:#0a0a0a;
+color:#d4af37;
+font-family:Arial;
+margin:0;
+}
+
+.top{
+background:#111;
+padding:20px;
+display:flex;
+justify-content:space-between;
+}
+
+.container{
+padding:40px;
+}
+
+.card{
+background:#111;
+padding:25px;
+border-radius:10px;
+margin-bottom:20px;
+border:1px solid #d4af37;
+}
+
+button{
+background:#d4af37;
+border:none;
+padding:10px 20px;
+border-radius:6px;
+cursor:pointer;
+margin-top:10px;
+}
+
+input{
+padding:10px;
+width:100%;
+margin-top:10px;
+}
+
+#result{
+margin-top:20px;
+}
+
+</style></head><body><div class="top"><h2>Nexora AI Video Creator</h2><a href="user-dashboard.html">العودة</a>
+
+</div><div class="container"><div class="card"><h3>إنشاء فيديو إعلان</h3><input id="product" placeholder="اسم المنتج"><button onclick="createVideo()">إنشاء الفيديو</button>
+
+<div id="result"></div></div><div class="card"><h3>نشر الفيديو</h3><button onclick="postInstagram()">نشر على Instagram</button>
+
+<button onclick="postTikTok()">نشر على TikTok</button>
+
+<button onclick="postFacebook()">نشر على Facebook</button>
+
+<button onclick="postYoutube()">نشر على YouTube</button>
+
+</div></div><script>
+
+function createVideo(){
+
+let product=document.getElementById("product").value
+
+document.getElementById("result").innerText=
+"تم إنشاء فيديو إعلان احترافي لمنتج: " + product + " بواسطة Nexora AI"
+
+}
+
+function postInstagram(){
+alert("سيتم نشر الفيديو على Instagram")
+}
+
+function postTikTok(){
+alert("سيتم نشر الفيديو على TikTok")
+}
+
+function postFacebook(){
+alert("سيتم نشر الفيديو على Facebook")
+}
+
+function postYoutube(){
+alert("سيتم نشر الفيديو على YouTube")
+}
+
+</script></body></html>
