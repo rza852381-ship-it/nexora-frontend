@@ -7,7 +7,7 @@ document.getElementById("loginForm").addEventListener("submit", function(e){
     const password = e.target[1].value;
 
     // نرسل طلب للسيرفر
-    fetch("https://https://nexurarm-25uustts.manus.space/api/salla/callback_URL/api/login", {  // حطي هنا رابط السيرفر الحقيقي
+    fetch("https://nexurarm-25uustts.manus.space/api/salla/callback_URL/api/login", {  // حطي هنا رابط السيرفر الحقيقي
         method: "POST",
         headers: {
             "Content-Type": "application/json"
