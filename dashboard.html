@@ -1,212 +1,71 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-
-<meta charset="UTF-8">
-<title>Nexora Dashboard</title>
-
-<style>
+<!DOCTYPE html><html lang="ar">
+<head><meta charset="UTF-8">
+<title>Nexora Dashboard</title><style>
 
 body{
 margin:0;
 font-family:Arial;
-background:#f4f6fb;
+background:#f2f2f2;
 display:flex;
 }
 
-.sidebar{
+/* القائمة الجانبية */
 
-width:220px;
-background:#6a5cff;
+.sidebar{
+width:230px;
+background:linear-gradient(180deg,#6c63ff,#5a54e6);
 color:white;
 height:100vh;
 padding:20px;
-
 }
 
 .sidebar h2{
 margin-bottom:30px;
 }
 
-.sidebar button{
-
+.sidebar a{
 display:block;
-width:100%;
-padding:12px;
-margin:10px 0;
-border:none;
-background:transparent;
 color:white;
-text-align:right;
-cursor:pointer;
-
+text-decoration:none;
+margin:15px 0;
+font-size:16px;
 }
 
+/* المحتوى */
+
 .main{
-
 flex:1;
-padding:30px;
-
+padding:40px;
 }
 
 .card{
-
 background:white;
-padding:20px;
+padding:30px;
 border-radius:12px;
+width:350px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
-margin-bottom:20px;
-
 }
 
-input{
+</style></head><body><div class="sidebar"><h2>NEXORA</h2><a href="dashboard.html">🏠 الملخص</a>
 
-padding:10px;
-margin:5px;
-}
+<a href="products.html">📦 المنتجات</a>
 
-</style>
+<a href="orders.html">🛒 الطلبات</a>
 
-</head>
+<a href="profits.html">📊 الأرباح</a>
 
-<body>
+<a href="ai-manager.html">🤖 المساعد الذكي</a>
 
-<div class="sidebar">
+<a href="video-ai.html">🎬 إنشاء فيديو إعلان</a>
 
-<h2>NEXORA</h2>
+<a href="pricing.html">💎 الخطط والاشتراكات</a>
 
-<button onclick="showSection('overview')">🏠 الملخص</button>
+<a href="index.html">🚪 تسجيل الخروج</a>
 
-<button onclick="showSection('products')">📦 المنتجات</button>
+</div><div class="main"><div class="card"><h2>ملخص المتجر</h2><p>عدد المنتجات: <span id="products">0</span></p><p>عدد الطلبات: <span id="orders">0</span></p><p>المبيعات: <span id="sales">0$</span></p></div></div><script>
 
-<button onclick="showSection('orders')">🛒 الطلبات</button>
+document.getElementById("products").innerText = 0
+document.getElementById("orders").innerText = 0
+document.getElementById("sales").innerText = "0$"
 
-<button onclick="showSection('analytics')">📊 التحليلات</button>
-
-<button onclick="showSection('ai')">🤖 المساعد</button>
-
-<button onclick="logout()">تسجيل الخروج</button>
-
-</div>
-
-<div class="main">
-
-<div id="overview" class="card">
-
-<h2>ملخص المتجر</h2>
-
-<p>عدد المنتجات: <span id="productCount">0</span></p>
-
-<p>عدد الطلبات: 0</p>
-
-<p>المبيعات: $0</p>
-
-</div>
-
-<div id="products" class="card" style="display:none">
-
-<h2>إضافة منتج</h2>
-
-<input id="name" placeholder="اسم المنتج">
-
-<input id="price" placeholder="السعر">
-
-<input id="image" placeholder="رابط الصورة">
-
-<button onclick="addProduct()">إضافة</button>
-
-</div>
-
-<div id="orders" class="card" style="display:none">
-
-<h2>الطلبات</h2>
-
-<p>لا توجد طلبات بعد</p>
-
-</div>
-
-<div id="analytics" class="card" style="display:none">
-
-<h2>تحليلات المتجر</h2>
-
-<p>سيتم إضافة التحليلات لاحقاً</p>
-
-</div>
-
-<div id="ai" class="card" style="display:none">
-
-<h2>المساعد الذكي</h2>
-
-<input id="aiInput" placeholder="اسأل المساعد">
-
-<button onclick="ai()">اسأل</button>
-
-<p id="aiResult"></p>
-
-</div>
-
-</div>
-
-<script>
-
-function showSection(section){
-
-document.querySelectorAll(".card").forEach(c=>{
-
-c.style.display="none"
-
-})
-
-document.getElementById(section).style.display="block"
-
-}
-
-function logout(){
-
-localStorage.removeItem("user")
-
-window.location="index.html"
-
-}
-
-async function addProduct(){
-
-const name=document.getElementById("name").value
-const price=document.getElementById("price").value
-const image=document.getElementById("image").value
-
-const res=await fetch("/add-product",{
-
-method:"POST",
-
-headers:{
-"Content-Type":"application/json"
-},
-
-body:JSON.stringify({name,price,image})
-
-})
-
-alert("تم إضافة المنتج")
-
-}
-
-function ai(){
-
-const q=document.getElementById("aiInput").value
-
-document.getElementById("aiResult").innerText=
-"المساعد: سنضيف الذكاء الاصطناعي قريباً"
-
-}
-
-if(!localStorage.getItem("user")){
-
-window.location="index.html"
-
-}
-
-</script>
-
-</body>
-</html>
+</script></body></html>
