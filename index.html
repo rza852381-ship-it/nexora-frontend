@@ -1,33 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar">
 <head>
-<title>NEXORA Login</title>
-<link rel="stylesheet" href="style.css">
-</head><meta name="description" content="Nexora منصة ذكية لإدارة المتاجر وتحليل الأداء">
 
-<meta name="keywords" content="Nexora, AI, متجر إلكتروني, تحليل الأداء, إدارة متجر">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Nexora Platform</title>
+
+<meta name="description" content="منصة Nexora الذكية لإدارة وتحليل المتاجر">
+<meta name="keywords" content="Nexora, AI, متجر إلكتروني, تحليل متجر">
 <meta name="author" content="Nexora">
-
 <meta name="robots" content="index, follow">
 
-<meta property="og:title" content="Nexora Platform">
-<meta property="og:description" content="منصة ذكية لإدارة وتحليل المتاجر">
+<meta property="og:title" content="Nexora AI Platform">
+<meta property="og:description" content="منصة ذكية لإدارة المتاجر وتحليل الأداء">
 <meta property="og:type" content="website">
+
+<link rel="stylesheet" href="style.css">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXX');
+</script>
+
+</head>
 
 <body>
 
-<h2>Login to NEXORA</h2>
+<canvas id="bg"></canvas>
 
-<form id="loginForm">
-<input type="email" placeholder="Email" required>
-<br><br>
-<input type="password" placeholder="Password" required>
-<br><br>
-<button type="submit">Login</button>
-</form>
+<div class="login-box">
 
-<p>Don't have an account? <a href="register.html">Create Account</a></p>
+<h1 class="logo">NEXORA</h1>
+
+<p class="subtitle">تسجيل الدخول</p>
+
+<input type="email" placeholder="البريد الإلكتروني">
+
+<input type="password" placeholder="كلمة المرور">
+
+<button onclick="login()">تسجيل الدخول</button>
+
+</div>
+
+<div id="assistant">
+
+<button onclick="openBot()">💬 المساعد</button>
+
+</div>
 
 <script src="app.js"></script>
 
