@@ -1,20 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar">
 <head>
-    <title>NEXORA Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Nexora Dashboard</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f4f6fb;
+padding:40px;
+text-align:center;
+}
+
+h1{
+color:#6a4df4;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+max-width:500px;
+margin:auto;
+}
+
+</style>
+
 </head>
+
 <body>
 
-<div class="dashboard">
-    <h1>Welcome to NEXORA Dashboard</h1>
-    <div class="card">Link Salla Store</div>
-    <div class="card">Connect Meta</div>
-    <div class="card">Create Campaign</div>
-    <div class="card">Financial Records</div>
-    <div class="card">Reports</div>
+<div class="card">
+
+<h1>مرحباً بك في Nexora 🚀</h1>
+
+<p>
+هذه لوحة التحكم الخاصة بمتجرك
+</p>
+
+<button onclick="logout()">تسجيل الخروج</button>
+
 </div>
 
-<script src="app.js"></script>
+<script>
+
+function logout(){
+
+localStorage.removeItem("user")
+
+window.location="index.html"
+
+}
+
+</script>
+
 </body>
+
 </html>
