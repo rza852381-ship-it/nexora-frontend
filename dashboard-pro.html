@@ -1,0 +1,89 @@
+<!DOCTYPE html><html lang="ar"><head><meta charset="UTF-8">
+<title>Nexora Dashboard</title><style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#0a0a0a;
+color:#d4af37;
+}
+
+.sidebar{
+width:220px;
+height:100vh;
+background:#111;
+position:fixed;
+padding:20px;
+}
+
+.sidebar h2{
+color:#d4af37;
+}
+
+.sidebar a{
+display:block;
+color:#d4af37;
+text-decoration:none;
+margin:15px 0;
+}
+
+.main{
+margin-left:240px;
+padding:30px;
+}
+
+.card{
+background:#111;
+border:1px solid #d4af37;
+border-radius:10px;
+padding:20px;
+margin-bottom:20px;
+}
+
+.stats{
+display:flex;
+gap:20px;
+}
+
+.stat{
+flex:1;
+background:#111;
+padding:20px;
+border-radius:10px;
+border:1px solid #d4af37;
+}
+
+button{
+background:#d4af37;
+border:none;
+padding:10px 20px;
+border-radius:8px;
+cursor:pointer;
+}
+
+</style></head><body><div class="sidebar"><h2>Nexora</h2><a href="#">لوحة التحكم</a>
+<a href="#">الطلبات</a>
+<a href="#">المنتجات</a>
+<a href="#">التحليلات</a>
+<a href="#">المحاسبة</a>
+
+</div><div class="main"><h1>لوحة تحكم المتجر</h1><div class="stats"><div class="stat">
+<h3>الطلبات</h3>
+<p id="orders">0</p>
+</div><div class="stat">
+<h3>المبيعات</h3>
+<p id="sales">0</p>
+</div><div class="stat">
+<h3>العملاء</h3>
+<p id="customers">0</p>
+</div></div><div class="card"><h3>ربط متجر سلة</h3><button onclick="connectSalla()">ربط المتجر</button>
+
+</div></div><script>
+
+function connectSalla(){
+
+window.location.href="https://nexurarm-25uustts.manus.space/salla-connect"
+
+}
+
+</script></body></html>
