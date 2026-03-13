@@ -13,7 +13,33 @@
 <title>Nexora Dashboard</title>
 
 <style>
-<script>
+<script>async function addProduct(){
+
+const name = document.querySelector("#productName").value
+const price = document.querySelector("#productPrice").value
+const image = document.querySelector("#productImage").value
+
+const res = await fetch("/add-product",{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({name,price,image})
+
+})
+
+const data = await res.json()
+
+if(data.success){
+
+alert("تم إضافة المنتج")
+
+}
+
+  }
 
 if(!localStorage.getItem("user")){
 
