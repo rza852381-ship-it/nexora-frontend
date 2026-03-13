@@ -1,0 +1,57 @@
+body{
+background:#0b0b0b;
+color:#d4af37;
+font-family:Arial;
+margin:0;
+}
+
+/* الكروت */
+
+.card{
+background:#111;
+border:1px solid #d4af37;
+border-radius:15px;
+padding:25px;
+box-shadow:0 0 20px rgba(212,175,55,0.2);
+}
+
+/* الأزرار */
+
+button{
+background:#d4af37;
+color:black;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer;
+}
+
+button:hover{
+background:#f5d97b;
+}
+
+/* الحقول */
+
+input{
+background:#1a1a1a;
+border:1px solid #d4af37;
+color:#fff;
+padding:10px;
+border-radius:8px;
+width:100%;
+margin:8px 0;
+}
+
+/* العناوين */
+
+h1,h2,h3{
+color:#d4af37;
+}
+
+/* الروابط */
+
+a{
+color:#f5d97b;
+text-decoration:none;
+}
