@@ -1,0 +1,70 @@
+<!DOCTYPE html><html lang="ar">
+<head><meta charset="UTF-8">
+<title>Nexora Analytics</title><style>
+
+body{
+background:#0a0a0a;
+font-family:Arial;
+color:#d4af37;
+margin:0;
+}
+
+.top{
+background:#111;
+padding:20px;
+display:flex;
+justify-content:space-between;
+}
+
+.container{
+padding:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.card{
+background:#111;
+padding:25px;
+border-radius:10px;
+border:1px solid #d4af37;
+text-align:center;
+}
+
+.number{
+font-size:28px;
+margin-top:10px;
+}
+
+</style></head><body><div class="top"><h2>Nexora Analytics</h2><a href="user-dashboard.html">العودة</a>
+
+</div><div class="container"><h1>تحليلات المتجر</h1><div class="grid"><div class="card">
+<h3>إجمالي المبيعات</h3>
+<div class="number" id="sales">0</div>
+</div><div class="card">
+<h3>عدد الطلبات</h3>
+<div class="number" id="orders">0</div>
+</div><div class="card">
+<h3>العملاء</h3>
+<div class="number" id="customers">0</div>
+</div><div class="card">
+<h3>صافي الربح</h3>
+<div class="number" id="profit">0</div>
+</div></div></div><script>
+
+// بيانات تجريبية حالياً
+let sales = 12000
+let orders = 85
+let customers = 54
+let profit = 6200
+
+document.getElementById("sales").innerText = sales + " ريال"
+document.getElementById("orders").innerText = orders
+document.getElementById("customers").innerText = customers
+document.getElementById("profit").innerText = profit + " ريال"
+
+</script></body>
+</html>
