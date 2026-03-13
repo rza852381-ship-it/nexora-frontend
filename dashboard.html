@@ -1,87 +1,96 @@
-<!DOCTYPE html><html lang="ar">
-<head><meta charset="UTF-8">
-<title>Nexora Dashboard</title><style>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>NEXORA&RB</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
 
 body{
+background:#000;
+color:#fff;
+font-family:'Tajawal',sans-serif;
 margin:0;
-font-family:Arial;
-background:#f2f2f2;
-display:flex;
-}
-
-/* القائمة الجانبية */
-
-.sidebar{
-width:230px;
-background:linear-gradient(180deg,#6c63ff,#5a54e6);
-color:white;
 height:100vh;
-padding:20px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+overflow:hidden;
 }
 
-.sidebar h2{
-margin-bottom:30px;
+/* العنوان */
+
+h1{
+font-size:70px;
+letter-spacing:4px;
+margin-bottom:60px;
 }
 
-.sidebar a{
-display:block;
-color:white;
+/* الأزرار */
+
+.buttons{
+display:flex;
+gap:20px;
+}
+
+.btn{
+border:1px solid #fff;
+padding:15px 40px;
 text-decoration:none;
-margin:15px 0;
-font-size:16px;
+color:#fff;
+transition:0.3s;
 }
 
-/* المحتوى */
-
-.main{
-flex:1;
-padding:40px;
+.btn:hover{
+background:#fff;
+color:#000;
 }
 
-.card{
-background:white;
-padding:30px;
-border-radius:12px;
-width:350px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+/* كرة coming soon */
+
+.sphere{
+position:absolute;
+top:80px;
+right:120px;
+width:160px;
+height:160px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:18px;
+animation:spin 8s linear infinite;
+border:1px solid #fff;
 }
 
-</style></head><body><div class="sidebar"><div class="cards"><div class="card">
-<img src="https://cdn-icons-png.flaticon.com/512/263/263115.png">
-<h3>المنتجات</h3>
-<p id="products">0</p>
-</div><div class="card">
-<img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png">
-<h3>الطلبات</h3>
-<p id="orders">0</p>
-</div><div class="card">
-<img src="https://cdn-icons-png.flaticon.com/512/1170/1170576.png">
-<h3>المبيعات</h3>
-<p id="sales">0$</p>
-</div><div class="card">
-<img src="https://cdn-icons-png.flaticon.com/512/4712/4712027.png">
-<h3>تحليلات</h3>
-<p>عرض البيانات</p>
-</div></div>h2>NEXORA</h2><a href="dashboard.html">🏠 الملخص</a>
+@keyframes spin{
+from{transform:rotate(0deg)}
+to{transform:rotate(360deg)}
+}
 
-<a href="products.html">📦 المنتجات</a>
+</style>
+</head>
 
-<a href="orders.html">🛒 الطلبات</a>
+<body>
 
-<a href="profits.html">📊 الأرباح</a>
+<div class="sphere">
+COMING SOON
+</div>
 
-<a href="ai-manager.html">🤖 المساعد الذكي</a>
+<h1>NEXORA&RB</h1>
 
-<a href="video-ai.html">🎬 إنشاء فيديو إعلان</a>
+<div class="buttons">
 
-<a href="pricing.html">💎 الخطط والاشتراكات</a>
+<a class="btn" href="#">انشاء حساب</a>
 
-<a href="index.html">🚪 تسجيل الخروج</a>
+<a class="btn" href="#">→ تسجيل دخول</a>
 
-</div><div class="main"><div class="card"><h2>ملخص المتجر</h2><p>عدد المنتجات: <span id="products">0</span></p><p>عدد الطلبات: <span id="orders">0</span></p><p>المبيعات: <span id="sales">0$</span></p></div></div><script>
+<a class="btn" href="#">→ منصة تسويقية بالذكاء الاصطناعي</a>
 
-document.getElementById("products").innerText = 0
-document.getElementById("orders").innerText = 0
-document.getElementById("sales").innerText = "0$"
+</div>
 
-</script></body></html>
+</body>
+</html>
