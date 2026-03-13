@@ -1,25 +1,181 @@
-<!DOCTYPE html><h2>إضافة منتج</h2>
-
-<input id="productName" placeholder="اسم المنتج">
-
-<input id="productPrice" placeholder="السعر">
-
-<input id="productImage" placeholder="رابط الصورة">
-
-<button onclick="addProduct()">إضافة</button>
+<!DOCTYPE html>
 <html lang="ar">
 <head>
+
 <meta charset="UTF-8">
 <title>Nexora Dashboard</title>
 
 <style>
-<script>async function addProduct(){
 
-const name = document.querySelector("#productName").value
-const price = document.querySelector("#productPrice").value
-const image = document.querySelector("#productImage").value
+body{
+margin:0;
+font-family:Arial;
+background:#f4f6fb;
+display:flex;
+}
 
-const res = await fetch("/add-product",{
+.sidebar{
+
+width:220px;
+background:#6a5cff;
+color:white;
+height:100vh;
+padding:20px;
+
+}
+
+.sidebar h2{
+margin-bottom:30px;
+}
+
+.sidebar button{
+
+display:block;
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+background:transparent;
+color:white;
+text-align:right;
+cursor:pointer;
+
+}
+
+.main{
+
+flex:1;
+padding:30px;
+
+}
+
+.card{
+
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+margin-bottom:20px;
+
+}
+
+input{
+
+padding:10px;
+margin:5px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>NEXORA</h2>
+
+<button onclick="showSection('overview')">🏠 الملخص</button>
+
+<button onclick="showSection('products')">📦 المنتجات</button>
+
+<button onclick="showSection('orders')">🛒 الطلبات</button>
+
+<button onclick="showSection('analytics')">📊 التحليلات</button>
+
+<button onclick="showSection('ai')">🤖 المساعد</button>
+
+<button onclick="logout()">تسجيل الخروج</button>
+
+</div>
+
+<div class="main">
+
+<div id="overview" class="card">
+
+<h2>ملخص المتجر</h2>
+
+<p>عدد المنتجات: <span id="productCount">0</span></p>
+
+<p>عدد الطلبات: 0</p>
+
+<p>المبيعات: $0</p>
+
+</div>
+
+<div id="products" class="card" style="display:none">
+
+<h2>إضافة منتج</h2>
+
+<input id="name" placeholder="اسم المنتج">
+
+<input id="price" placeholder="السعر">
+
+<input id="image" placeholder="رابط الصورة">
+
+<button onclick="addProduct()">إضافة</button>
+
+</div>
+
+<div id="orders" class="card" style="display:none">
+
+<h2>الطلبات</h2>
+
+<p>لا توجد طلبات بعد</p>
+
+</div>
+
+<div id="analytics" class="card" style="display:none">
+
+<h2>تحليلات المتجر</h2>
+
+<p>سيتم إضافة التحليلات لاحقاً</p>
+
+</div>
+
+<div id="ai" class="card" style="display:none">
+
+<h2>المساعد الذكي</h2>
+
+<input id="aiInput" placeholder="اسأل المساعد">
+
+<button onclick="ai()">اسأل</button>
+
+<p id="aiResult"></p>
+
+</div>
+
+</div>
+
+<script>
+
+function showSection(section){
+
+document.querySelectorAll(".card").forEach(c=>{
+
+c.style.display="none"
+
+})
+
+document.getElementById(section).style.display="block"
+
+}
+
+function logout(){
+
+localStorage.removeItem("user")
+
+window.location="index.html"
+
+}
+
+async function addProduct(){
+
+const name=document.getElementById("name").value
+const price=document.getElementById("price").value
+const image=document.getElementById("image").value
+
+const res=await fetch("/add-product",{
 
 method:"POST",
 
@@ -31,15 +187,18 @@ body:JSON.stringify({name,price,image})
 
 })
 
-const data = await res.json()
-
-if(data.success){
-
 alert("تم إضافة المنتج")
 
 }
 
-  }
+function ai(){
+
+const q=document.getElementById("aiInput").value
+
+document.getElementById("aiResult").innerText=
+"المساعد: سنضيف الذكاء الاصطناعي قريباً"
+
+}
 
 if(!localStorage.getItem("user")){
 
@@ -48,56 +207,6 @@ window.location="index.html"
 }
 
 </script>
-body{
-font-family:Arial;
-background:#f4f6fb;
-padding:40px;
-text-align:center;
-}
-
-h1{
-color:#6a4df4;
-}
-
-.card{
-background:white;
-padding:30px;
-border-radius:12px;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
-max-width:500px;
-margin:auto;
-}
-
-</style>
-
-</head>
-
-<body>
-
-<div class="card">
-
-<h1>مرحباً بك في Nexora 🚀</h1>
-
-<p>
-هذه لوحة التحكم الخاصة بمتجرك
-</p>
-
-<button onclick="logout()">تسجيل الخروج</button>
-
-</div>
-
-<script>
-
-function logout(){
-
-localStorage.removeItem("user")
-
-window.location="index.html"
-
-}
-
-</script>
 
 </body>
-
 </html>
