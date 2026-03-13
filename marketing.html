@@ -1,0 +1,82 @@
+<!DOCTYPE html><html lang="ar"><head><meta charset="UTF-8">
+<title>Nexora Marketing</title><style>
+
+body{
+background:#0a0a0a;
+color:#d4af37;
+font-family:Arial;
+margin:0;
+}
+
+.top{
+background:#111;
+padding:20px;
+display:flex;
+justify-content:space-between;
+}
+
+.container{
+padding:40px;
+}
+
+.card{
+background:#111;
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
+border:1px solid #d4af37;
+}
+
+button{
+background:#d4af37;
+border:none;
+padding:10px 20px;
+border-radius:6px;
+cursor:pointer;
+}
+
+</style></head><body><div class="top"><h2>Nexora Marketing</h2><a href="user-dashboard.html">العودة للوحة التحكم</a>
+
+</div><div class="container"><div class="card"><h3>إنشاء حملة تسويقية</h3><button onclick="createCampaign()">إنشاء حملة</button>
+
+<p id="campaignCount"></p></div><div class="card"><h3>إنشاء فيديو إعلان بالذكاء الاصطناعي</h3><button onclick="createVideo()">إنشاء فيديو</button>
+
+</div><div class="card"><h3>إنشاء صور إعلانية بالذكاء الاصطناعي</h3><button onclick="createImage()">إنشاء صورة</button>
+
+</div></div><script>
+
+let freeCampaigns = 2
+let createdCampaigns = 0
+
+function createCampaign(){
+
+if(createdCampaigns >= freeCampaigns){
+
+alert("انتهت الحملات المجانية، يرجى الاشتراك")
+
+return
+
+}
+
+createdCampaigns++
+
+document.getElementById("campaignCount").innerText =
+"عدد الحملات المستخدمة: " + createdCampaigns + " / 2"
+
+alert("تم إنشاء حملة بنجاح")
+
+}
+
+function createVideo(){
+
+alert("سيتم إنشاء فيديو إعلان AI قريباً")
+
+}
+
+function createImage(){
+
+alert("سيتم إنشاء صورة إعلان AI قريباً")
+
+}
+
+</script></body></html>
