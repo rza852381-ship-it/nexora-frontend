@@ -1,110 +1,15 @@
-<!DOCTYPE html>
-<html lang="ar">
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Nexora Login</title>
-
-<style>
-
-body{
-margin:0;
-font-family:Arial;
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-background:linear-gradient(135deg,#6e6de7,#7b4fe0);
-}
-
-.card{
-
-background:rgba(255,255,255,0.2);
-padding:40px;
-border-radius:20px;
-width:300px;
-text-align:center;
-backdrop-filter:blur(10px);
-
-}
-
-h1{
-margin-bottom:10px;
-}
-
-input{
-
-width:100%;
-padding:12px;
-margin:10px 0;
-border:none;
-border-radius:10px;
-
-}
-
-button{
-
-width:100%;
-padding:12px;
-border:none;
-border-radius:10px;
-background:#4f67ff;
-color:white;
-font-size:16px;
-cursor:pointer;
-
-}
-
-button:hover{
-opacity:0.9;
-}
-
-</style>
-
-</head>
-
-<body>
-
-<div class="card">
-
-<h1>NEXORA</h1>
-
-<p>تسجيل الدخول</p>
-
-<input type="email" placeholder="البريد الالكتروني">
-
-<input type="password" placeholder="كلمة المرور">
-
-<button onclick="login()">تسجيل الدخول</button>
-function connect(){
-window.location.href="https://accounts.salla.sa/oauth2/auth?client_id=7e42b932-6690-477d-aba0-a9fca78047e5&redirect_uri=https://nexurarm-25uustts.manus.space/api/salla/callback&response_type=code"
-}
-</div>
+<!-- زر ربط متجر سلة -->
+<button onclick="connect()">ربط متجر سلة</button>
 
 <script>
-
-function login(){
-
-const email=document.querySelector("input[type='email']").value
-const password=document.querySelector("input[type='password']").value
-
-if(email && password){
-
-window.location.href="panel.html"
-
-}else{
-
-alert("الرجاء إدخال البريد وكلمة المرور")
-
+function connect(){
+  // الرابط الكامل لتسجيل الدخول في Salla مع Client ID و Redirect URI
+  const clientID = "7e42b932-6690-477d-aba0-a9fca78047e5";
+  const redirectURI = encodeURIComponent("https://nexurarm-25uustts.manus.space/api/salla/callback");
+  
+  const oauthURL = `https://accounts.salla.sa/oauth2/auth?client_id=${clientID}&redirect_uri=${redirectURI}&response_type=code`;
+  
+  // تحويل المستخدم مباشرة إلى صفحة تسجيل الدخول في Salla
+  window.location.href = oauthURL;
 }
-
-}
-
 </script>
-
-</body>
-
-</html>
