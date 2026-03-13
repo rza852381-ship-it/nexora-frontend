@@ -1,30 +1,38 @@
 <!DOCTYPE html>
 <html lang="ar">
+
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Nexora Login</title>
 
 <style>
 
 body{
+margin:0;
 font-family:Arial;
-background:linear-gradient(135deg,#6a5cff,#8e7dff);
 height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
+background:linear-gradient(135deg,#6e6de7,#7b4fe0);
 }
 
 .card{
 
-background:rgba(255,255,255,0.15);
+background:rgba(255,255,255,0.2);
 padding:40px;
-border-radius:15px;
+border-radius:20px;
 width:300px;
 text-align:center;
 backdrop-filter:blur(10px);
 
+}
+
+h1{
+margin-bottom:10px;
 }
 
 input{
@@ -43,11 +51,15 @@ width:100%;
 padding:12px;
 border:none;
 border-radius:10px;
-background:#4f6df5;
+background:#4f67ff;
 color:white;
 font-size:16px;
 cursor:pointer;
 
+}
+
+button:hover{
+opacity:0.9;
 }
 
 </style>
@@ -58,12 +70,13 @@ cursor:pointer;
 
 <div class="card">
 
-<h2>NEXORA</h2>
+<h1>NEXORA</h1>
+
 <p>تسجيل الدخول</p>
 
-<input id="email" placeholder="البريد الالكتروني">
+<input type="email" placeholder="البريد الالكتروني">
 
-<input id="password" type="password" placeholder="كلمة المرور">
+<input type="password" placeholder="كلمة المرور">
 
 <button onclick="login()">تسجيل الدخول</button>
 
@@ -71,14 +84,25 @@ cursor:pointer;
 
 <script>
 
-async function login(){
+function login(){
 
-const email = document.querySelector("#email").value
-const password = document.querySelector("#password").value
+const email=document.querySelector("input[type='email']").value
+const password=document.querySelector("input[type='password']").value
 
-const res = await fetch("/login",{
+if(email && password){
 
-method:"POST",
+window.location.href="dashboard.html"
 
-headers:{
-"Content-Type
+}else{
+
+alert("الرجاء إدخال البريد وكلمة المرور")
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
