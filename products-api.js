@@ -1,13 +1,21 @@
 const express = require("express")
 const router = express.Router()
 
-router.get("/api/salla/callback",(req,res)=>{
+let products=[]
 
-const code = req.query.code
+router.post("/api/products",(req,res)=>{
 
-console.log("Salla Auth Code:",code)
+const {name,price,image}=req.body
 
-res.send("Salla Connected Successfully")
+products.push({name,price,image})
+
+res.json({success:true})
+
+})
+
+router.get("/api/products",(req,res)=>{
+
+res.json(products)
 
 })
 
