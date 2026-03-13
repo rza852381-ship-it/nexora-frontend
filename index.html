@@ -1,3 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nexora Login</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#6e6de7,#7b4fe0);
+}
+
+.card{
+
+background:rgba(255,255,255,0.2);
+padding:40px;
+border-radius:20px;
+width:300px;
+text-align:center;
+backdrop-filter:blur(10px);
+
+}
+
+h1{
+margin-bottom:10px;
+}
+
+input{
+
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:10px;
+
+}
+
+button{
+
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+background:#4f67ff;
+color:white;
+font-size:16px;
+cursor:pointer;
+
+}
+
+button:hover{
+opacity:0.9;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>NEXORA</h1>
+
+<p>تسجيل الدخول</p>
+
+<input type="email" placeholder="البريد الالكتروني">
+
+<input type="password" placeholder="كلمة المرور">
+
+<button onclick="login()">تسجيل الدخول</button>
 <!-- زر ربط متجر سلة -->
 <button onclick="connect()">ربط متجر سلة</button>
 
@@ -13,3 +94,29 @@ function connect(){
   window.location.href = oauthURL;
 }
 </script>
+</div>
+
+<script>
+
+function login(){
+
+const email=document.querySelector("input[type='email']").value
+const password=document.querySelector("input[type='password']").value
+
+if(email && password){
+
+window.location.href="dashboard.html"
+
+}else{
+
+alert("الرجاء إدخال البريد وكلمة المرور")
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
