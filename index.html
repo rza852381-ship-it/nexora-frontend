@@ -1,151 +1,32 @@
-<!DOCTYPE html><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#000000">
+<!DOCTYPE html>
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NEXORA</title>
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
-}
-
-/* الخلفية السوداء */
-body{
-background:#000;
-height:100vh;
-overflow:hidden;
-display:flex;
-justify-content:center;
-align-items:center;
-color:white;
-}
-
-/* طبقة النجوم */
-.stars{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:url("https://www.transparenttextures.com/patterns/stardust.png");
-animation:moveStars 200s linear infinite;
-z-index:-2;
-}
-
-/* اللمعات */
-.twinkling{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:radial-gradient(white 1px, transparent 1px);
-background-size:80px 80px;
-opacity:0.15;
-animation:twinkle 6s ease-in-out infinite alternate;
-z-index:-1;
-}
-
-/* حركة النجوم */
-@keyframes moveStars{
-from{transform:translateY(0);}
-to{transform:translateY(-1000px);}
-}
-
-/* حركة اللمعان */
-@keyframes twinkle{
-from{opacity:0.05;}
-to{opacity:0.25;}
-}
-
-/* المحتوى */
-.container{
-text-align:center;
-}
-
-h1{
-font-size:60px;
-letter-spacing:5px;
-margin-bottom:30px;
-}
-
-/* الأزرار */
-.buttons{
-display:flex;
-gap:20px;
-justify-content:center;
-flex-wrap:wrap;
-}
-
-button{
-background:transparent;
-border:1px solid white;
-color:white;
-padding:15px 30px;
-font-size:16px;
-cursor:pointer;
-transition:0.3s;
-}
-
-button:hover{
-background:white;
-color:black;
-}
-
-</style>
-
-</head><!-- SEO Basic -->
-<title>NEXORA | منصة تسويق بالذكاء الاصطناعي للمتاجر الإلكترونية</title>
-
-<meta name="description" content="منصة Nexora تساعد المتاجر الإلكترونية على تحليل الأداء التسويقي وإدارة الحملات باستخدام الذكاء الاصطناعي مع ربط مباشر مع متجر سلة.">
-
-<meta name="keywords" content="Nexora, تسويق بالذكاء الاصطناعي, تحليل الحملات, منصة تسويق, متجر سلة, تحسين المتاجر الإلكترونية">
-
-<meta name="author" content="NEXORA">
-
-<meta name="robots" content="index, follow">
-
+<title>NEXORA | منصة SaaS للتجارة الإلكترونية</title>
+<meta name="description" content="NEXORA: إدارة وتحليل متاجر الإلكترونية مع أدوات ذكاء اصطناعي وتقارير مالية متقدمة">
+<link rel="stylesheet" href="style.css">
+</head>
 <body>
 
-<div class="stars"></div><div class="buttons">
-
-<a href="register.html">
-<button>إنشاء حساب</button>
-</a>
-
-<a href="login.html">
-<button>تسجيل دخول →</button>
-</a>
-
-<a href="platform.html">
-<button>منصة تسويقية بالذكاء الاصطناعي →</button>
-</a>
-
-</div>
+<div class="stars"></div>
 <div class="twinkling"></div>
 
 <div class="container">
+  <h1>NEXORA Platform</h1>
+  <p>إدارة متجرك الإلكتروني وتحليل الأداء وتحسين المبيعات</p>
 
-<h1>NEXORA&RB</h1>
-
-<div class="buttons">
-<button>إنشاء حساب</button>
-<button>تسجيل دخول →</button>
-<button>منصة تسويقية بالذكاء الاصطناعي →</button>
+  <div class="buttons">
+    <a href="dashboard.html"><button>لوحة تحليلات المتجر</button></a>
+    <a href="campaigns.html"><button>الحملات التسويقية</button></a>
+    <a href="customers.html"><button>الزبائن والطلبات</button></a>
+    <a href="ai-tools.html"><button>أدوات الذكاء الاصطناعي</button></a>
+    <a href="subscription.html"><button>الاشتراك</button></a>
+    <a href="meta-seo.html"><button>SEO وMeta</button></a>
+    <a href="about.html"><button>من نحن</button></a>
+    <a href="blog.html"><button>نصائح للتجار</button></a>
+    <a href="terms.html"><button>تعليمات المنصة</button></a>
+  </div>
 </div>
-
-</div>
-
 </body>
-</html>؟<!-- Open Graph -->
-<meta property="og:title" content="NEXORA | منصة تسويق بالذكاء الاصطناعي">
-<meta property="og:description" content="حلول تسويق ذكية للمتاجر الإلكترونية مع تحليل الأداء وربط متجر سلة.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://nexora.ai">
-<meta property="og:image" content="https://nexora.ai/preview.jpg">
+</html>
