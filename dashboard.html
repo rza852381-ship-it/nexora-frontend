@@ -2,95 +2,76 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>NEXORA&RB</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
-
-<style>
-
-body{
-background:#000;
-color:#fff;
-font-family:'Tajawal',sans-serif;
-margin:0;
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-overflow:hidden;
-}
-
-/* العنوان */
-
-h1{
-font-size:70px;
-letter-spacing:4px;
-margin-bottom:60px;
-}
-
-/* الأزرار */
-
-.buttons{
-display:flex;
-gap:20px;
-}
-
-.btn{
-border:1px solid #fff;
-padding:15px 40px;
-text-decoration:none;
-color:#fff;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#fff;
-color:#000;
-}
-
-/* كرة coming soon */
-
-.sphere{
-position:absolute;
-top:80px;
-right:120px;
-width:160px;
-height:160px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:18px;
-animation:spin 8s linear infinite;
-border:1px solid #fff;
-}
-
-@keyframes spin{
-from{transform:rotate(0deg)}
-to{transform:rotate(360deg)}
-}
-
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لوحة تحليلات المتجر | NEXORA</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="sphere">
-COMING SOON
+<div class="stars"></div>
+<div class="twinkling"></div>
+
+<div class="container">
+<h1>لوحة تحليلات المتجر</h1>
+<p>عرض الأداء المالي والتجاري للمتجر</p>
+
+<!-- Cards الأرباح والأداء -->
+<div class="stats">
+<div class="stat-card">
+<h2>الأرباح الشهرية</h2>
+<p>$12,450</p>
+<img src="assets/images/profit.png" alt="Profit">
 </div>
 
-<h1>NEXORA&RB</h1>
+<div class="stat-card">
+<h2>الطلبات المكتملة</h2>
+<p>3,420</p>
+<img src="assets/images/orders.png" alt="Orders">
+</div>
+
+<div class="stat-card">
+<h2>أعلى المنتجات مبيعًا</h2>
+<p>جلابيات رمضان</p>
+<img src="assets/images/top-products.png" alt="Top Products">
+</div>
+</div>
+
+<!-- محاسب مالي -->
+<div class="finance-section">
+<h2>المحاسب المالي الذكي</h2>
+<p>يحسب الأرباح والالتزامات ويقدم نصائح لتحسين الأداء.</p>
+<div class="stat-card">
+<h3>إجمالي الأرباح</h3>
+<p>$124,500</p>
+</div>
+<div class="stat-card">
+<h3>الالتزامات</h3>
+<p>$45,300</p>
+</div>
+<div class="stat-card">
+<h3>الاحتياجات القادمة</h3>
+<p>تجديد المخزون، عروض رمضان</p>
+</div>
+</div>
+
+<!-- Reports متجاوبة -->
+<div class="report-section">
+<h2>تقارير العملاء</h2>
+<p>نظرة شاملة لأكثر من 5000 عميل</p>
+<table>
+<tr><th>اسم العميل</th><th>الطلب</th><th>القيمة</th><th>الحالة</th></tr>
+<tr><td>أميرة</td><td>جلابية رمضان</td><td>$150</td><td>مكتمل</td></tr>
+<tr><td>محمد</td><td>فستان سهرة</td><td>$200</td><td>قيد الشحن</td></tr>
+<tr><td>سارة</td><td>مستحضرات تجميل</td><td>$75</td><td>مكتمل</td></tr>
+<tr><td>زيد</td><td>أكسسوارات</td><td>$45</td><td>قيد الشحن</td></tr>
+</table>
+</div>
 
 <div class="buttons">
-
-<a class="btn" href="#">انشاء حساب</a>
-
-<a class="btn" href="#">→ تسجيل دخول</a>
-
-<a class="btn" href="#">→ منصة تسويقية بالذكاء الاصطناعي</a>
-
+<a href="index.html"><button>الرئيسية</button></a>
+<a href="campaigns.html"><button>الحملات التسويقية</button></a>
 </div>
 
+</div>
 </body>
 </html>
