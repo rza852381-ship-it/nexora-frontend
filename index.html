@@ -1,125 +1,99 @@
 <!DOCTYPE html><html lang="ar">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>NEXORA | منصة إدارة المتاجر بالذكاء الاصطناعي</title><meta name="description" content="NEXORA منصة SaaS لتحليل المتاجر الإلكترونية، إدارة الحملات التسويقية، تقارير الأرباح، وربط وسائل التواصل باستخدام الذكاء الاصطناعي"><link rel="stylesheet" href="style.css"><style>
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>NEXORA Dashboard</title><link rel="stylesheet" href="style.css"><style>
 
 body{
-background:#0b0b0f;
-color:white;
-font-family:Tahoma;
-text-align:center;
 margin:0;
-padding:0;
+font-family:Arial;
+background:#0a0a12;
+color:white;
+display:flex;
 }
 
-header{
-padding:60px 20px;
+.sidebar{
+width:230px;
+background:#14141f;
+height:100vh;
+padding:20px;
 }
 
-h1{
-font-size:42px;
+.sidebar h2{
+color:#ffd700;
+margin-bottom:30px;
+}
+
+.sidebar a{
+display:block;
+padding:12px;
+color:#ddd;
+text-decoration:none;
 margin-bottom:10px;
+border-radius:8px;
 }
 
-p{
-color:#aaa;
+.sidebar a:hover{
+background:#1e1e2d;
 }
 
-.features{
+.main{
+flex:1;
+padding:30px;
+}
+
+.cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
-padding:40px;
-max-width:1100px;
-margin:auto;
+margin-top:30px;
 }
 
 .card{
-background:#16161d;
+background:#171726;
 padding:25px;
-border-radius:12px;
-transition:0.3s;
+border-radius:10px;
 }
 
-.card:hover{
-transform:translateY(-6px);
-background:#1f1f2a;
+.card h3{
+margin:0;
+font-size:22px;
 }
 
-.card h2{
-font-size:20px;
-margin-bottom:10px;
-}
-
-.card a{
-display:inline-block;
+.stat{
+font-size:28px;
+color:#4ade80;
 margin-top:10px;
-padding:10px 18px;
-background:#4f46e5;
-color:white;
-text-decoration:none;
-border-radius:8px;
-font-size:14px;
 }
 
-.card a:hover{
-background:#6366f1;
-}
-
-footer{
-margin-top:60px;
+.chart{
+margin-top:40px;
+background:#171726;
 padding:20px;
-color:#777;
-font-size:14px;
+border-radius:10px;
 }
 
-</style></head><body><header><h1>منصة NEXORA</h1><p>منصة SaaS لتحليل المتاجر الإلكترونية وإدارة التسويق باستخدام الذكاء الاصطناعي</p></header><section class="features"><div class="card">
-<h2>لوحة التحليلات</h2>
-<p>تحليل أرباح المتجر والطلبات</p>
-<a href="dashboard.html">الدخول</a>
-</div><div class="card">
-<h2>أدوات الذكاء الاصطناعي</h2>
-<p>اقتراح منتجات وتسويق ذكي</p>
-<a href="ai-tools.html">الدخول</a>
-</div><div class="card">
-<h2>الحملات التسويقية</h2>
-<p>إدارة الإعلانات وتحليل الأداء</p>
-<a href="campaigns.html">الدخول</a>
-</div><div class="card">
-<h2>إدارة العملاء</h2>
-<p>متابعة الطلبات وسلوك العملاء</p>
-<a href="customers.html">الدخول</a>
-</div><div class="card">
-<h2>إنشاء التقارير</h2>
-<p>تقارير الأرباح والطلبات</p>
-<a href="reports.html">فتح</a>
-</div><div class="card">
-<h2>ثيمات المتاجر</h2>
-<p>اختيار تصاميم جاهزة للمتاجر</p>
-<a href="themes.html">عرض</a>
-</div><div class="card">
-<h2>ربط وسائل التواصل</h2>
-<p>ربط Instagram و TikTok و Snapchat</p>
-<a href="social-connect.html">ربط</a>
-</div><div class="card">
-<h2>اقتراح المؤثرين</h2>
-<p>ذكاء اصطناعي يقترح مشاهير للتعاون</p>
-<a href="influencers-ai.html">استكشاف</a>
-</div><div class="card">
-<h2>الاشتراكات</h2>
-<p>خطط استخدام المنصة</p>
-<a href="subscription.html">عرض</a>
-</div><div class="card">
-<h2>تحسين محركات البحث</h2>
-<p>Meta Tags واقتراح كلمات Google</p>
-<a href="meta-seo.html">فتح</a>
-</div><div class="card">
-<h2>المقالات</h2>
-<p>نصائح للتجار وتحسين المتاجر</p>
-<a href="blog.html">قراءة</a>
-</div><div class="card">
-<h2>عن المنصة</h2>
-<p>تعرف على منصة Nexora</p>
-<a href="about.html">المزيد</a>
-</div></section><footer><p>© 2026 NEXORA SaaS Platform</p></footer></body>
-</html>
+button{
+background:#6366f1;
+border:none;
+padding:10px 18px;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+</style></head><body><div class="sidebar"><h2>NEXORA</h2><a href="dashboard.html">لوحة التحليلات</a>
+
+<a href="campaigns.html">الحملات</a>
+
+<a href="reports.html">التقارير</a>
+
+<a href="themes.html">الثيمات</a>
+
+<a href="social-connect.html">ربط السوشيال</a>
+
+<a href="influencers.html">المؤثرين</a>
+
+<a href="landing.html">الخروج</a>
+
+</div><div class="main"><h1>لوحة تحكم المتجر</h1><p>مرحباً بك في منصة NEXORA</p><div class="cards"><div class="card"><h3>إجمالي المبيعات</h3><div class="stat">$12,450</div></div><div class="card"><h3>الطلبات</h3><div class="stat">320</div></div><div class="card"><h3>العملاء</h3><div class="stat">1,250</div></div><div class="card"><h3>الحملات النشطة</h3><div class="stat">8</div></div></div><div class="chart"><h2>تحليل الأرباح</h2><p>سيتم عرض رسوم الأرباح هنا</p><button>تحديث البيانات</button>
+
+</div></div></body></html>
