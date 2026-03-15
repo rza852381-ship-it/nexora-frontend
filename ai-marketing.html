@@ -1,0 +1,82 @@
+<!DOCTYPE html><html lang="ar">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>NEXORA AI Marketing</title><style>
+
+body{
+background:#0a0a12;
+font-family:Arial;
+color:white;
+text-align:center;
+padding:40px;
+}
+
+.container{
+background:#171726;
+padding:40px;
+border-radius:12px;
+max-width:500px;
+margin:auto;
+}
+
+input,select{
+width:90%;
+padding:12px;
+margin:10px;
+border-radius:6px;
+border:none;
+}
+
+button{
+background:#6366f1;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.result{
+margin-top:25px;
+background:#0f0f18;
+padding:20px;
+border-radius:8px;
+}
+
+</style></head><body><h1>مولد الإعلانات بالذكاء الاصطناعي</h1><div class="container"><input id="product" placeholder="اسم المنتج"><select id="store"><option value="beauty">متجر تجميل</option><option value="fashion">متجر أزياء</option><option value="electronics">متجر إلكترونيات</option></select><button onclick="generateAd()">توليد إعلان</button>
+
+<div class="result" id="output">سيظهر الإعلان هنا
+
+</div></div><script>
+
+function generateAd(){
+
+let product = document.getElementById("product").value;
+
+let type = document.getElementById("store").value;
+
+let ad="";
+
+if(type=="beauty"){
+
+ad="اكتشفي جمالك مع "+product+" ✨ منتج مميز يمنحك العناية المثالية لبشرتك. اطلبه الآن واستمتعي بإطلالة رائعة.";
+
+}
+
+if(type=="fashion"){
+
+ad="تألقي بأحدث صيحات الموضة مع "+product+" 👗 تصميم أنيق وجودة عالية. احصلي عليه الآن قبل نفاد الكمية.";
+
+}
+
+if(type=="electronics"){
+
+ad="تجربة تقنية مذهلة مع "+product+" ⚡ أداء قوي وتقنيات حديثة. اطلبه الآن واستمتع بأفضل جودة.";
+
+}
+
+document.getElementById("output").innerHTML=ad;
+
+}
+
+</script></body>
+</html>
