@@ -2,77 +2,199 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>لوحة تحليلات المتجر | NEXORA</title>
-<link rel="stylesheet" href="style.css">
-</head><button onclick="openCampaign()">الحملات</button>
+<title>NEXORA Dashboard</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#e5e5e5;
+color:#111;
+}
+
+/* الشريط العلوي */
+
+.topbar{
+background:#6a0dad;
+color:white;
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+/* القائمة الجانبية */
+
+.sidebar{
+width:220px;
+height:100vh;
+background:#d9d9d9;
+position:fixed;
+padding-top:20px;
+}
+
+.sidebar a{
+display:block;
+padding:14px;
+text-decoration:none;
+color:#333;
+font-weight:bold;
+}
+
+.sidebar a:hover{
+background:#cfcfcf;
+}
+
+/* المحتوى */
+
+.main{
+margin-left:240px;
+padding:30px;
+}
+
+/* البطاقات */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card h3{
+color:#6a0dad;
+margin-bottom:10px;
+}
+
+/* جدول */
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:30px;
+background:white;
+}
+
+th,td{
+padding:12px;
+border-bottom:1px solid #ddd;
+text-align:center;
+}
+
+th{
+background:#6a0dad;
+color:white;
+}
+
+</style>
+
+</head>
 
 <body>
 
-<div class="stars"></div>
-<div class="twinkling"></div>
+<div class="topbar">
 
-<div class="container">
-<h1>لوحة تحليلات المتجر</h1>
-<p>عرض الأداء المالي والتجاري للمتجر</p>
+<div class="logo">NEXORA</div>
 
-<!-- Cards الأرباح والأداء -->
-<div class="stats">
-<div class="stat-card">
-<h2>الأرباح الشهرية</h2>
-<p>$12,450</p>
-<img src="assets/images/profit.png" alt="Profit">
+<div>
+منصة تحليل وتسويق المتاجر
 </div>
 
-<div class="stat-card">
-<h2>الطلبات المكتملة</h2>
-<p>3,420</p>
-<img src="assets/images/orders.png" alt="Orders">
 </div>
 
-<div class="stat-card">
+
+<div class="sidebar">
+
+<a href="dashboard.html">لوحة التحكم</a>
+
+<a href="campaigns.html">الحملات الإعلانية</a>
+
+<a href="analytics.html">تحليل المنتجات</a>
+
+<a href="profits.html">الأرباح الشهرية</a>
+
+<a href="influencers.html">منصة المشاهير</a>
+
+</div>
+
+
+<div class="main">
+
+<h2>لوحة تحكم NEXORA</h2>
+
+<p style="color:#555">إدارة الحملات وتحليل المنتجات بسهولة</p>
+
+
+<div class="cards">
+
+<div class="card">
+<h3>الأرباح الشهرية</h3>
+<p>12,500 ريال</p>
+</div>
+
+<div class="card">
+<h3>الطلبات المكتملة</h3>
+<p>210</p>
+</div>
+
+<div class="card">
+<h3>أفضل منتج</h3>
+<p>عطر فاخر</p>
+</div>
+
+<div class="card">
+<h3>الحملات النشطة</h3>
+<p>5</p>
+</div>
+
+</div>
+
+
 <h2>أعلى المنتجات مبيعًا</h2>
-<p>جلابيات رمضان</p>
-<img src="assets/images/top-products.png" alt="Top Products">
-</div>
-</div>
 
-<!-- محاسب مالي -->
-<div class="finance-section">
-<h2>المحاسب المالي الذكي</h2>
-<p>يحسب الأرباح والالتزامات ويقدم نصائح لتحسين الأداء.</p>
-<div class="stat-card">
-<h3>إجمالي الأرباح</h3>
-<p>$124,500</p>
-</div>
-<div class="stat-card">
-<h3>الالتزامات</h3>
-<p>$45,300</p>
-</div>
-<div class="stat-card">
-<h3>الاحتياجات القادمة</h3>
-<p>تجديد المخزون، عروض رمضان</p>
-</div>
-</div>
-
-<!-- Reports متجاوبة -->
-<div class="report-section">
-<h2>تقارير العملاء</h2>
-<p>نظرة شاملة لأكثر من 5000 عميل</p>
 <table>
-<tr><th>اسم العميل</th><th>الطلب</th><th>القيمة</th><th>الحالة</th></tr>
-<tr><td>أميرة</td><td>جلابية رمضان</td><td>$150</td><td>مكتمل</td></tr>
-<tr><td>محمد</td><td>فستان سهرة</td><td>$200</td><td>قيد الشحن</td></tr>
-<tr><td>سارة</td><td>مستحضرات تجميل</td><td>$75</td><td>مكتمل</td></tr>
-<tr><td>زيد</td><td>أكسسوارات</td><td>$45</td><td>قيد الشحن</td></tr>
+
+<tr>
+<th>المنتج</th>
+<th>المبيعات</th>
+<th>السعر</th>
+</tr>
+
+<tr>
+<td>عطر فاخر</td>
+<td>120</td>
+<td>250 ريال</td>
+</tr>
+
+<tr>
+<td>ساعة رجالية</td>
+<td>80</td>
+<td>300 ريال</td>
+</tr>
+
+<tr>
+<td>نظارة شمسية</td>
+<td>65</td>
+<td>150 ريال</td>
+</tr>
+
 </table>
+
+
 </div>
 
-<div class="buttons">
-<a href="index.html"><button>الرئيسية</button></a>
-<a href="campaigns.html"><button>الحملات التسويقية</button></a>
-</div>
-<script src="scripts/buttons.js"></script>
-</div>
 </body>
 </html>
