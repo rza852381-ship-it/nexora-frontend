@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>إنشاء حملة إعلانية</title>
+<style>
+
+body{
+font-family:Arial;
+background:linear-gradient(135deg,#1d2671,#c33764);
+color:white;
+text-align:center;
+padding:40px;
+}
+
+input,textarea{
+width:80%;
+padding:10px;
+margin:10px;
+border-radius:10px;
+border:none;
+}
+
+button{
+padding:12px 25px;
+background:#ff7eb3;
+border:none;
+border-radius:10px;
+color:white;
+cursor:pointer;
+}
+
+#message{
+margin-top:20px;
+font-size:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>إنشاء حملة إعلانية</h1>
+
+<input id="campaignName" placeholder="اسم الحملة">
+
+<textarea id="adText" placeholder="نص الإعلان"></textarea>
+
+<input id="budget" placeholder="الميزانية">
+
+<br>
+
+<button onclick="createCampaign()">إطلاق الحملة</button>
+
+<div id="message"></div>
+
+<script>
+
+function createCampaign(){
+
+let name=document.getElementById("campaignName").value
+let text=document.getElementById("adText").value
+let budget=document.getElementById("budget").value
+
+fetch("https://YOUR-BACKEND-URL/campaign",{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify({
+name:name,
+text:text,
+budget:budget
+})
+})
+
+.then(res=>res.json())
+.then(data=>{
+
+document.getElementById("message").innerHTML=
+"✅ تم إنشاء الحملة بنجاح"
+
+})
+
+}
+
+</script>
+
+</body>
+</html>
